@@ -60,6 +60,12 @@
       "type": "biginteger",
       "default": "0",
       "max": "20000000"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "posts"
     }
   }
 }
