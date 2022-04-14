@@ -10,21 +10,13 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "name": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+      "pluginOptions": {},
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "posts": {
       "type": "relation",
@@ -37,6 +29,11 @@
       "relation": "oneToMany",
       "target": "api::tag.tag",
       "mappedBy": "category"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
