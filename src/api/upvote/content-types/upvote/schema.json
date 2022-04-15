@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "upvotes",
+  "info": {
+    "singularName": "upvote",
+    "pluralName": "upvotes",
+    "displayName": "upvote",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "count": {
+      "max": "100000",
+      "type": "biginteger",
+      "default": "0"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post.post",
+      "inversedBy": "upvote"
+    }
+  }
+}

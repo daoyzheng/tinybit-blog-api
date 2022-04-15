@@ -51,21 +51,17 @@
       "target": "api::tag.tag",
       "inversedBy": "posts"
     },
-    "upvote": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "biginteger",
-      "default": "0",
-      "max": "20000000"
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "posts"
+    },
+    "upvote": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::upvote.upvote",
+      "mappedBy": "post"
     }
   }
 }
